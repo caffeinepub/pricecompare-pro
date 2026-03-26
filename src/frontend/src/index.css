@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.625rem;
+
+    /* Brand blue: #1E63D6 → oklch(0.47 0.19 264) */
+    --primary: 0.47 0.19 264;
+    --primary-foreground: 1 0 0;
+
+    /* Page background: #FFFFFF */
+    --background: 1 0 0;
+    --foreground: 0.18 0.01 250;
+
+    /* Card */
+    --card: 1 0 0;
+    --card-foreground: 0.18 0.01 250;
+
+    /* Popover */
+    --popover: 1 0 0;
+    --popover-foreground: 0.18 0.01 250;
+
+    /* Secondary */
+    --secondary: 0.96 0.01 240;
+    --secondary-foreground: 0.18 0.01 250;
+
+    /* Muted */
+    --muted: 0.96 0.005 240;
+    --muted-foreground: 0.54 0.02 248;
+
+    /* Accent */
+    --accent: 0.93 0.04 240;
+    --accent-foreground: 0.47 0.19 264;
+
+    /* Destructive */
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 1 0 0;
+
+    /* Border: #E5E7EB */
+    --border: 0.91 0.004 247;
+    --input: 0.91 0.004 247;
+    --ring: 0.47 0.19 264;
+
+    /* Green success */
+    --success: 0.55 0.18 145;
+    --success-foreground: 1 0 0;
+    --success-bg: 0.95 0.08 145;
+
+    /* Hero bg */
+    --hero-bg: 0.95 0.04 240;
+    --hero-bg-to: 0.93 0.05 240;
+
+    /* Navbar bg: #F7F8FA */
+    --navbar-bg: 0.97 0.005 240;
+
+    /* Admin sidebar: #0F172A */
+    --admin-sidebar: 0.16 0.03 252;
+    --admin-sidebar-foreground: 0.97 0 0;
+
+    /* Charts */
+    --chart-1: 0.47 0.19 264;
+    --chart-2: 0.55 0.18 145;
+    --chart-3: 0.6 0.2 30;
+    --chart-4: 0.6 0.18 190;
+    --chart-5: 0.65 0.2 320;
+
+    /* Sidebar */
+    --sidebar: 0.97 0.005 240;
+    --sidebar-foreground: 0.18 0.01 250;
+    --sidebar-primary: 0.47 0.19 264;
+    --sidebar-primary-foreground: 1 0 0;
+    --sidebar-accent: 0.93 0.04 240;
+    --sidebar-accent-foreground: 0.47 0.19 264;
+    --sidebar-border: 0.91 0.004 247;
+    --sidebar-ring: 0.47 0.19 264;
+  }
+
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Inter", sans-serif;
+  }
+}
+
+@layer utilities {
+  .text-brand-blue {
+    color: oklch(var(--primary));
+  }
+  .bg-brand-blue {
+    background-color: oklch(var(--primary));
+  }
+  .bg-hero {
+    background: linear-gradient(
+      135deg,
+      oklch(var(--hero-bg)),
+      oklch(var(--hero-bg-to))
+    );
+  }
+  .bg-admin-sidebar {
+    background-color: oklch(var(--admin-sidebar));
+  }
+  .text-admin-sidebar {
+    color: oklch(var(--admin-sidebar-foreground));
+  }
+  .bg-success-badge {
+    background-color: oklch(var(--success-bg));
+    color: oklch(var(--success));
+  }
+  .amazon-btn {
+    background-color: #111111;
+    color: #ffffff;
+  }
+  .amazon-btn:hover {
+    background-color: #333333;
+  }
+  .flipkart-btn {
+    background-color: oklch(0.51 0.22 264);
+    color: #ffffff;
+  }
+  .flipkart-btn:hover {
+    background-color: oklch(0.45 0.22 264);
+  }
+}
